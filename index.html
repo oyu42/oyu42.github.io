@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Yuito Ohno - Ph.D. Student at Nagoya University">
+<title>Yuito Ohno | 大野 結人</title>
+<style>
+:root {
+  --bg: #fafaf8;
+  --fg: #1c1c1c;
+  --accent: #1f3a5f;
+  --muted: #6a6a6a;
+  --border: #e2e2dc;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+.lang-toggle {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  background: #fff;
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  color: var(--fg);
+  border-radius: 3px;
+  font-family: inherit;
+  z-index: 10;
+  transition: background 0.15s, color 0.15s;
+}
+.lang-toggle:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 36px;
+}
+.profile-img {
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 18%;
+  flex-shrink: 0;
+}
+.header-text { min-width: 0; }
+.header-text h1 {
+  margin: 0 0 6px;
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.header-text .affil {
+  margin: 0 0 4px;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.header-text .affil:last-child { margin-bottom: 0; }
+
+section { margin-bottom: 44px; }
+section h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 18px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+  letter-spacing: 0.03em;
+}
+section p { margin: 0 0 12px; }
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list li {
+  display: flex;
+  gap: 18px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border);
+  align-items: baseline;
+}
+.list li:last-child { border-bottom: none; }
+.list .date {
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  width: 120px;
+  font-variant-numeric: tabular-nums;
+}
+.list .body {
+  flex: 1;
+  min-width: 0;
+}
+
+.empty {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.92rem;
+}
+
+.keywords {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.keywords .label {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 2px 8px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  border-radius: 2px;
+  vertical-align: 2px;
+}
+
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.7rem;
+  line-height: 1;
+  vertical-align: 1px;
+  border-radius: 2px;
+  transition: background 0.15s, color 0.15s;
+}
+.link-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+.link-btn::before { content: "↗"; }
+
+.contact-list { list-style: none; padding: 0; margin: 0; }
+.contact-list li { padding: 4px 0; }
+.contact-list .label {
+  display: inline-block;
+  width: 110px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  .container { padding: 56px 18px 60px; }
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 18px;
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+  }
+  .profile-img { width: 108px; height: 108px; }
+  .header-text h1 { font-size: 1.4rem; }
+  .list li { flex-direction: column; gap: 2px; }
+  .list .date { width: auto; font-size: 0.82rem; }
+  .lang-toggle { top: 12px; right: 12px; }
+}
+</style>
+</head>
+<body>
+<button class="lang-toggle" id="langToggle" data-ja="EN" data-en="JA" aria-label="toggle language">EN</button>
+<div class="container">
+
+<header>
+<img src="assets/profile.jpg" alt="Yuito Ohno" class="profile-img">
+<div class="header-text">
+<h1 data-ja="大野 結人" data-en="Yuito Ohno">大野 結人</h1>
+<p class="affil" data-ja="名古屋大学 大学院 工学研究科 機械システム工学専攻 博士後期課程" data-en="Ph.D. Student, Department of Mechanical Systems Engineering, Graduate School of Engineering, Nagoya University">名古屋大学 大学院 工学研究科 機械システム工学専攻 博士後期課程</p>
+<p class="affil"><span data-ja="モビリティシステムグループ" data-en="Mobility System Group">モビリティシステムグループ</span><a class="link-btn" href="https://www.suzlab.mae.nagoya-u.ac.jp/" target="_blank" rel="noopener" aria-label="Mobility System Group website"></a></p>
+</div>
+</header>
+
+<section>
+<h2 data-ja="About" data-en="About">About</h2>
+<p data-ja="名古屋大学大学院工学研究科の博士後期課程に在籍しています。エネルギーマネジメントシステム（EMS）に関する研究に取り組んでおり、特に電気自動車（EV）と共有蓄電池を活用した、再生可能エネルギーの効率的な利用を目指しています。" data-en="I am a Ph.D. student at the Graduate School of Engineering, Nagoya University. My research focuses on energy management systems (EMS), with a particular interest in efficient utilization of renewable energy via electric vehicles (EVs) and shared energy storage systems.">名古屋大学大学院工学研究科の博士後期課程に在籍しています。エネルギーマネジメントシステム（EMS）に関する研究に取り組んでおり、特に電気自動車（EV）と共有蓄電池を活用した、再生可能エネルギーの効率的な利用を目指しています。</p>
+<p><span data-ja="また、麻雀のスコア管理アプリを作りました。チーム内でランキングを作成したり、点棒なしで麻雀を楽しめるサービスです。ぜひ使ってみてください。" data-en="I also built a mahjong score management app, which lets teams create rankings and play mahjong without using physical score sticks. Please give it a try.">また、麻雀のスコア管理アプリを作りました。チーム内でランキングを作成したり、点棒なしで麻雀を楽しめるサービスです。ぜひ使ってみてください。</span><a class="link-btn" href="https://mahjong-score-omega.vercel.app/" target="_blank" rel="noopener" aria-label="Mahjong score app"></a></p>
+<p class="keywords"><span class="label">Keywords</span>Energy Management System, V2X System, Optimization, Mahjong</p>
+</section>
+
+<section>
+<h2 data-ja="News" data-en="News">News</h2>
+<p class="empty" data-ja="準備中" data-en="Coming soon">準備中</p>
+</section>
+
+<section>
+<h2 data-ja="学歴" data-en="Education">学歴</h2>
+<ul class="list">
+<li>
+<span class="date">2026.04 -</span>
+<span class="body" data-ja="名古屋大学大学院 工学研究科 機械システム工学専攻 博士後期課程" data-en="Ph.D. Student, Department of Mechanical Systems Engineering, Graduate School of Engineering, Nagoya University">名古屋大学大学院 工学研究科 機械システム工学専攻 博士後期課程</span>
+</li>
+<li>
+<span class="date">2024.04 - 2026.03</span>
+<span class="body" data-ja="名古屋大学大学院 工学研究科 機械システム工学専攻 博士前期課程" data-en="M.E., Department of Mechanical Systems Engineering, Graduate School of Engineering, Nagoya University">名古屋大学大学院 工学研究科 機械システム工学専攻 博士前期課程</span>
+</li>
+<li>
+<span class="date">2020.04 - 2024.03</span>
+<span class="body" data-ja="名古屋大学 工学部 機械・航空宇宙工学科" data-en="B.E., Department of Mechanical and Aerospace Engineering, School of Engineering, Nagoya University">名古屋大学 工学部 機械・航空宇宙工学科</span>
+</li>
+</ul>
+</section>
+
+<section>
+<h2 data-ja="論文" data-en="Publications">論文</h2>
+<p class="empty" data-ja="準備中" data-en="Coming soon">準備中</p>
+</section>
+
+<section>
+<h2 data-ja="連絡先" data-en="Contact">連絡先</h2>
+<ul class="contact-list">
+<li><span class="label" data-ja="Email 1" data-en="Email 1">Email1</span>ono.yuito.z6 [at] s.mail.nagoya-u.ac.jp</li>
+<li><span class="label" data-ja="Email 2" data-en="Email 2">Email2</span>yuohn42 [at] gmail.com</li>
+</ul>
+</section>
+
+</div>
+
+<script>
+(function () {
+  const toggle = document.getElementById('langToggle');
+  let currentLang = 'ja';
+
+  function setLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-ja][data-en]').forEach(function (el) {
+      const text = el.getAttribute('data-' + lang);
+      if (text !== null) el.textContent = text;
+    });
+  }
+
+  toggle.addEventListener('click', function () {
+    const next = currentLang === 'ja' ? 'en' : 'ja';
+    setLang(next);
+    if (history.replaceState) {
+      const hash = next === 'en' ? '#en' : '';
+      history.replaceState(null, '', window.location.pathname + window.location.search + hash);
+    }
+  });
+
+  if (window.location.hash === '#en') setLang('en');
+})();
+</script>
+</body>
+</html>
