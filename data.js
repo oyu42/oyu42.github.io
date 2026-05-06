@@ -44,8 +44,8 @@ const data = {
       en: "I am a Ph.D. student at the Graduate School of Engineering, Nagoya University. My research focuses on energy management systems (EMS), with a particular interest in efficient utilization of renewable energy via electric vehicles (EVs) and shared energy storage systems.",
     },
     {
-      ja: "また、麻雀のスコア管理アプリを作りました。チーム内でランキングを作成したり、点棒なしで麻雀を楽しめるサービスです。ぜひ使ってみてください。",
-      en: "I also built a mahjong score management app, which lets teams create rankings and play mahjong without using physical score sticks. Please give it a try.",
+      ja: "趣味で麻雀のスコア管理アプリを作りました。チーム内でランキングを作成したり、点棒なしで麻雀を楽しめるサービスです。ぜひ使ってみてください。",
+      en: "As a hobby, I built a mahjong score management app, which lets teams create rankings and play mahjong without using physical score sticks. Please give it a try.",
       url: "https://mahjong-score-omega.vercel.app/",
     },
   ],
