@@ -120,6 +120,22 @@
     }
   }
 
+  // 外部リンク（.link-btn）のクリックを GA4 に送る。
+  // イベント委譲で1か所だけ購読し、リンク先 URL と周辺テキストを記録する。
+  function trackLinkClicks() {
+    document.addEventListener('click', function (e) {
+      const link = e.target.closest('a.link-btn');
+      if (!link || typeof window.gtag !== 'function') return;
+      const context = link.closest('li, p');
+      const label = ((context ? context.textContent : link.getAttribute('aria-label')) || '')
+        .trim().replace(/\s+/g, ' ').slice(0, 100);
+      window.gtag('event', 'link_click', {
+        link_url: link.href,
+        link_text: label || link.href,
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     if (typeof data === 'undefined') {
       console.error('data.js not loaded');
@@ -128,6 +144,7 @@
     if (window.location.hash === '#en') currentLang = 'en';
     render();
     applyLang(currentLang);
+    trackLinkClicks();
 
     document.getElementById('langToggle').addEventListener('click', function () {
       setLang(currentLang === 'ja' ? 'en' : 'ja');
