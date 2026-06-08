@@ -102,10 +102,25 @@ const data = {
 
   // -------------------------------------------------------------------
   // 論文
-  // 例: { date: "2025", ja: "論文タイトル, 雑誌名, 巻号, ページ", en: "...", url: "https://..." },
+  // 例: { type: "conference", date: "2025", ja: "...", en: "...", url: "https://..." },
+  // type には "conference"（国際会議）または "journal"（論文誌）を指定するとタグが付く。
   // 配列が空のときは「準備中 / Coming soon」が表示される。
   // -------------------------------------------------------------------
   publications: [
+    {
+      type: "conference",
+      date: "2025",
+      ja: "Yuito Ohno, Shinkichi Inagaki, Tatsuya Suzuki, \"Model Predictive Control for EMS Integrating EV and Shared Storage Based on Simultaneous Optimization of EV Transport, Charging/Discharging and Trading Price,\" IECON 2025 – 51st Annual Conference of the IEEE Industrial Electronics Society, 2025.",
+      en: "Yuito Ohno, Shinkichi Inagaki, Tatsuya Suzuki, \"Model Predictive Control for EMS Integrating EV and Shared Storage Based on Simultaneous Optimization of EV Transport, Charging/Discharging and Trading Price,\" IECON 2025 – 51st Annual Conference of the IEEE Industrial Electronics Society, 2025.",
+      url: "https://ieeexplore.ieee.org/document/11221717/",
+    },
+    {
+      type: "conference",
+      date: "2024",
+      ja: "Yuito Ohno, Shinkichi Inagaki, Takuma Yamaguchi, Akira Ito, Tatsuya Suzuki, \"Charging Control Method for HEMS Considering Multiple Vehicle Usage Scenarios by Using EV,\" 2024 SICE Festival with Annual Conference (SICE FES 2024), 2024.",
+      en: "Yuito Ohno, Shinkichi Inagaki, Takuma Yamaguchi, Akira Ito, Tatsuya Suzuki, \"Charging Control Method for HEMS Considering Multiple Vehicle Usage Scenarios by Using EV,\" 2024 SICE Festival with Annual Conference (SICE FES 2024), 2024.",
+      url: "https://ieeexplore.ieee.org/document/10804891/",
+    },
   ],
 
   // -------------------------------------------------------------------

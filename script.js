@@ -59,6 +59,33 @@
     }).join('') + '</ul>';
   }
 
+  // 論文種別タグ（国際会議 / 論文誌）
+  const PUB_TYPE = {
+    conference: { ja: '国際会議', en: "Int'l Conf." },
+    journal: { ja: '論文誌', en: 'Journal' },
+  };
+
+  function pubTag(type) {
+    const t = PUB_TYPE[type];
+    if (!t) return '';
+    return '<span class="tag tag-' + escapeHtml(type) + '" ' + attrPair(t) + '>' +
+      escapeHtml(t.ja) + '</span>';
+  }
+
+  function renderPublications(items) {
+    const el = document.getElementById('publications-content');
+    if (!items || items.length === 0) {
+      el.innerHTML = '<p class="empty" data-ja="準備中" data-en="Coming soon">準備中</p>';
+      return;
+    }
+    el.innerHTML = '<ul class="list">' + items.map(function (item) {
+      return '<li>' +
+        '<span class="date">' + escapeHtml(item.date || '') + '</span>' +
+        '<span class="body">' + pubTag(item.type) + bilingual(item) + linkBtn(item.url) + '</span>' +
+        '</li>';
+    }).join('') + '</ul>';
+  }
+
   function renderContact() {
     document.getElementById('contact-content').innerHTML =
       '<ul class="contact-list">' + data.contact.map(function (c) {
@@ -72,7 +99,7 @@
     renderAbout();
     renderList('news-content', data.news);
     renderList('education-content', data.education);
-    renderList('publications-content', data.publications);
+    renderPublications(data.publications);
     renderContact();
   }
 
