@@ -44,8 +44,8 @@ const data = {
       en: "I am a Ph.D. student at the Graduate School of Engineering, Nagoya University. My research focuses on energy management systems (EMS), with a particular interest in efficient utilization of renewable energy via electric vehicles (EVs) and shared energy storage systems.",
     },
     {
-      ja: "麻雀のスコア管理アプリを作りました。",
-      en: "I built a mahjong score management app.",
+      ja: "P.S. 麻雀のスコア管理アプリを作りました。",
+      en: "P.S. I built a mahjong score management app.",
       url: "https://mahjong-score-omega.vercel.app/",
     },
   ],
@@ -67,8 +67,8 @@ const data = {
   news: [
     {
       date: "2026.06.01",
-      ja: "情報処理推進機構（IPA）2026年度未踏ターゲット事業（量子コンピューティング技術を活用したソフトウェア開発分野）にイノベータとして採択されました",
-      en: "Selected as an Innovator for the IPA MITOU Target Program (Quantum Computing), FY2026",
+      ja: "情報処理推進機構（IPA）2026年度未踏ターゲット事業（量子コンピューティング技術を活用したソフトウェア開発分野）に採択されました",
+      en: "Selected for the IPA MITOU Target Program (Quantum Computing), FY2026",
       url: "https://www.ipa.go.jp/jinzai/mitou/target/2026-quantum/gaiyou-tr-1.html",
     },
   ],
@@ -79,8 +79,8 @@ const data = {
   education: [
     {
       date: "2026.06 - 2027.02",
-      ja: "情報処理推進機構（IPA）2026年度未踏ターゲット事業（量子コンピューティング技術を活用したソフトウェア開発分野）イノベータ",
-      en: "IPA MITOU Target Program (Quantum Computing), FY2026 — Innovator",
+      ja: "情報処理推進機構（IPA）2026年度未踏ターゲット事業（量子コンピューティング技術を活用したソフトウェア開発分野）",
+      en: "IPA MITOU Target Program (Quantum Computing), FY2026",
       url: "https://www.ipa.go.jp/jinzai/mitou/target/2026-quantum/gaiyou-tr-1.html",
     },
     {
