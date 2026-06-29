@@ -71,6 +71,12 @@ const data = {
       en: "Selected for the IPA MITOU Target Program (Quantum Computing), FY2026",
       url: "https://www.ipa.go.jp/jinzai/mitou/target/2026-quantum/gaiyou-tr-1.html",
     },
+    {
+      date: "2026.04.01",
+      ja: "木下記念事業団 奨学生に採用されました",
+      en: "Selected as a scholarship student of the Kinoshita Memorial Foundation",
+      url: "https://www.k-zaidan.or.jp/",
+    },
   ],
 
   // -------------------------------------------------------------------
