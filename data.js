@@ -67,7 +67,7 @@ const data = {
   news: [
     {
       date: "2026.08.18",
-      ja: "EVsmart Park に我々の研究（V2Xエネルギーマネジメント）に関する記事が掲載されました",
+      ja: "EVsmart Park に我々の研究に関する記事が掲載されました",
       en: "Our research on V2X energy management was featured in an article on EVsmart Park",
       url: "https://blog.evsmart.net/t/ev-v2x-pr/3996",
     },
