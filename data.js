@@ -66,6 +66,12 @@ const data = {
   // -------------------------------------------------------------------
   news: [
     {
+      date: "2026.08.18",
+      ja: "EVsmart Park に我々の研究（V2Xエネルギーマネジメント）に関する記事が掲載されました",
+      en: "Our research on V2X energy management was featured in an article on EVsmart Park",
+      url: "https://blog.evsmart.net/t/ev-v2x-pr/3996",
+    },
+    {
       date: "2026.06.01",
       ja: "情報処理推進機構（IPA）2026年度未踏ターゲット事業（量子コンピューティング技術を活用したソフトウェア開発分野）に採択されました",
       en: "Selected for the IPA MITOU Target Program (Quantum Computing), FY2026",
